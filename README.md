@@ -13,5 +13,16 @@ docker run
   
 info 
   
+  `docker container ls -a` list all containers
+  
   `docker inspect image_name` return info in json format
+  
+remove 
+  
+  `docker container rm container_id` to remove container by id, must be stoped 
+  
+  
+  
 
+# Jenkins example 
+``
