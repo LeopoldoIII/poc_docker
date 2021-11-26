@@ -22,7 +22,17 @@ remove
   `docker container rm container_id` to remove container by id, must be stoped 
   
   
-  
+# postgress
 
+docker pull postgres:alpine
+docker run --name postgres00 -e POSTGRES_PASSWORD=you_password -d -p 5432:5432 postgres:alpine
+docker exec -it postgres00 bash
+
+
+# selenium
+docker run -d -p 4444:4444 --name selenium-hub -P selenium/hub:3.141.59
+docker run -d -P --link selenium-hub:hub selenium/node-firefox-debug	
+
+  
 # Jenkins example 
 ``
