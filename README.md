@@ -40,3 +40,25 @@ docker run -d -P --link selenium-hub:hub selenium/node-firefox-debug
   
 # Jenkins example 
 ``
+
+# Jenkins ubuntu 
+
+https://docs.docker.com/engine/install/ubuntu/
+
+fix 
+source https://adamtheautomator.com/docker-permission-denied/#:~:text=You've%20confirmed%20your%20Docker,group%20triggers%20permission%20denied%20error.
+
+    docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/create": dial unix /var/run/docker.sock: connect: permission denied.
+    
+    
+    sudo groupadd docker
+    
+    sudo usermod -aG docker programmer
+    
+    sudo usermod -aG docker user
+    
+    sudo newgrp docker
+    
+    sudo chmod 666 /var/run/docker.sock
+
+  
